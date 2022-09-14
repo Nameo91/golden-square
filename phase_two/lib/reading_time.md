@@ -1,4 +1,4 @@
-# Reading Time Design Recipe
+# Reading Time Method Design Recipe
 
 ## 1. Describe the Problem
   _Put or write the user story here. Add any clarifying notes you might have._
@@ -12,7 +12,7 @@ _Include the name of the method, its parameters, return value, and side effects.
 
 ```ruby
   time = reading_time(text)
-  # * text is a string with a word in it
+  # * text is a string with wordw in it
   # * time is a Integer representing a minute
 ```
 ## 3. Create Examples as Tests
