@@ -8,6 +8,7 @@ class LetterCounter
     most_common = nil
     most_common_count = 1
     @text.chars.each do |char|
+      binding.irb
       next unless is_letter?(char)
       counter[char] = (counter[char] || 1) + 1
       if counter[char] > most_common_count
