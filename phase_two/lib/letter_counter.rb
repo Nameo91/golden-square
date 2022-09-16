@@ -28,5 +28,10 @@ end
 counter = LetterCounter.new("Digital Punk")
 p counter.calculate_most_common
 p [2, "i"]
+
+counter = LetterCounter.new("aa bb cccc ddddd")
+p counter.calculate_most_common
+p [5, "d"]
+
 # Intended output:
 # [2, "i"]
