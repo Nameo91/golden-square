@@ -3,7 +3,7 @@ require_relative '../lib/todo.rb'
 
 RSpec.describe 'itegration' do
   context "when we add some tasks" do
-    it "lists the all incomplete tasks" do
+    it "initially lists the all incomplete tasks" do
       task_list = TodoList.new
       task_1 = Todo.new("Buy milk")
       task_2 = Todo.new("Buy bread")
@@ -36,7 +36,7 @@ RSpec.describe 'itegration' do
   end
   
   context "when we mark all tasks completed" do
-    it "returns am empty array of incomplete tasks" do
+    it "returns an empty array of incomplete tasks" do
       task_list = TodoList.new
       task_1 = Todo.new("Buy milk")
       task_2 = Todo.new("Buy bread")
@@ -46,7 +46,7 @@ RSpec.describe 'itegration' do
       expect(task_list.incomplete).to eq []
     end
 
-    it "returns am empty array of incomplete tasks" do
+    it "returns all tasks as completed" do
       task_list = TodoList.new
       task_1 = Todo.new("Buy milk")
       task_2 = Todo.new("Buy bread")
