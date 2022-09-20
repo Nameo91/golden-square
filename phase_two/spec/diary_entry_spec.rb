@@ -23,7 +23,7 @@ RSpec.describe DiaryEntry do
     context "given a zero wpm" do
       it "fails" do
         diary_entry = DiaryEntry.new("title", "contents" * 180)
-        expect{ diary_entry.reading_time(0) }.to raise_error "Reading speed must be above zero"
+        expect{ diary_entry.reading_time(0) }.to raise_error "WPM must be above zero."
       end
     end
 
@@ -68,7 +68,7 @@ RSpec.describe DiaryEntry do
     context "with given 0 wmp" do
       it "fails" do
         diary_entry = DiaryEntry.new("title", "one two three")
-        expect{ diary_entry.reading_chunk(0,2) }.to raise_error "Reading speed must be above zero" 
+        expect{ diary_entry.reading_chunk(0,2) }.to raise_error "WPM must be above zero." 
       end
     end
   end

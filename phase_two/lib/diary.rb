@@ -3,7 +3,7 @@ class Diary
     @entries = []
   end
 
-  def add(entry) # entry is an instance of DiaryEntry
+  def add(entry) 
     @entries << entry
   end
 

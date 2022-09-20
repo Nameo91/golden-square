@@ -18,12 +18,12 @@ class DiaryEntry
   end
 
   def reading_time(wpm)
-    fail "Reading speed must be above zero" unless wpm.positive?
+    fail "WPM must be above zero." unless wpm.positive?
     return (count_words / wpm.to_f).ceil
   end
   
   def reading_chunk(wpm, minutes) 
-    fail "Reading speed must be above zero" unless wpm.positive?
+    fail "WPM must be above zero." unless wpm.positive?
     words_user_can_read = wpm * minutes
     start_from = @next_word_read
     end_at = @next_word_read + words_user_can_read 
