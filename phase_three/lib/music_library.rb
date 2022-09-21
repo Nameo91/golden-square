@@ -12,12 +12,8 @@ class MusicLibrary
   end
   
   def search(keyword)
-    @matched_tracks = []
-    @tracks.each do |track|
-      if track.matches?(keyword)
-      @matched_tracks << track 
-      end
+    @tracks.select do |track|
+      track.matches?(keyword)
     end
-      @matched_tracks
   end
 end
