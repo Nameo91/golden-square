@@ -119,13 +119,20 @@ Track.new("", "Veracocha") # => "The title is missing!"
 # fails if the artist is not given
 Track.new("Carte Blanche", "") # => "The artist is missing!"
 
-# returns true if the keyword matches either 
+# returns true if the keyword matches either title or artist
 track = Track.new("Carte Blanche", "Veracocha")
 track.matches?("Carte") # => True
+track.matches?("Ver") # => True
 
 # returns false if the keyword doesn't match 
 track = Track.new("Carte Blanche", "Veracocha")
 track.matches?("abc") # => false
+
+# Music_library
+# initially 
+library = MusicLibrary.new
+library.all # => []
+
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
