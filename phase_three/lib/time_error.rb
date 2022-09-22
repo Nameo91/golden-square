@@ -18,3 +18,7 @@ class TimeError
     return DateTime.parse(json["utc_datetime"]).to_time
   end
 end
+
+require 'net/http'
+time_error = TimeError.new(Net::HTTP)
+p time_error.error(Time.now)
